@@ -46,19 +46,25 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                FanCarouselImageSlider(
-                  imagesLink: imageURL,
-                  isAssets: true,
-                  autoPlay: false,
-                  sliderHeight: 300,
-                  isClickable: false,
-                  indicatorActiveColor: Colors.amberAccent,
-                )
-              ],
+          Container(
+            color: Colors.grey.withOpacity(0.5),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    FanCarouselImageSlider(
+                      imagesLink: imageURL,
+                      isAssets: true,
+                      autoPlay: false,
+                      sliderHeight: 300,
+                      isClickable: false,
+                      indicatorActiveColor: Colors.amberAccent,
+                    )
+                  ],
+                ),
+              ),
             ),
           ),
         ],
