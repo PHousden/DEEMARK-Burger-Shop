@@ -6,8 +6,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("DEEMARK"),
+        backgroundColor: Colors.black,
+        automaticallyImplyLeading: false,
+      ),
     );
   }
 }
