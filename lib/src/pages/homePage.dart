@@ -1,3 +1,4 @@
+import 'package:burger_app/src/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 
@@ -23,25 +24,45 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text("DEEMARK Burger"),
+        automaticallyImplyLeading: false,
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const SizedBox(
-                height: 100,
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+            height: 150,
+            child: Card(
+              color: Color(0xFFac646c),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
               ),
-              FanCarouselImageSlider(
-                imagesLink: imageURL,
-                isAssets: true,
-                autoPlay: false,
-              )
-            ],
+              elevation: 8,
+              child: const Center(
+                child: Text(
+                  "WELCOME!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.amberAccent),
+
+                ),
+              ),
+            ),
           ),
-        ),
+          Container(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  FanCarouselImageSlider(
+                    imagesLink: imageURL,
+                    isAssets: true,
+                    autoPlay: false,
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
-
   }
 }
