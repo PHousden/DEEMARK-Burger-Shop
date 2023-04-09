@@ -17,31 +17,51 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("DEEMARK"),
+        title: const Text(
+          "DEEMARK",
+        ),
         backgroundColor: Colors.black,
         automaticallyImplyLeading: false,
       ),
-      body: Container(
-        color: Colors.grey,
-        width: double.infinity,
-        padding: EdgeInsets.all(15),
-        child: Stack(
+      body: ListView(
+          scrollDirection: Axis.vertical,
           children: [
-            CarouselSlider(
-              items: genarateImagesTile(),
-              options: CarouselOptions(
-                enlargeCenterPage: true,
-                autoPlay: false,
+            Container(
+              color: Colors.grey,
+              width: double.infinity,
+              padding: EdgeInsets.all(15),
+              child: CarouselSlider(
+                items: genarateImagesTile(),
+                options: CarouselOptions(
+                  enlargeCenterPage: true,
+                  autoPlay: false,
+                ),
               ),
             ),
-
+            MainPage(),
           ],
         ),
-      ),
     );
   }
 }
 
+class MainPage extends StatelessWidget {
+  const MainPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      margin: EdgeInsets.only(top: 10),
+      padding: EdgeInsets.all(10),
+      child: Text(
+        "Welcome to DEEMARK!"
+      ),
+    );
+  }
+}
 
 List<Widget> genarateImagesTile() {
   return imgList
