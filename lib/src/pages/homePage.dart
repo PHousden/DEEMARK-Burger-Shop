@@ -12,20 +12,19 @@ class HomePage extends StatelessWidget {
         title: Text("DEEMARK Burger"),
       ),
       body: Container(
-        color: Colors.amberAccent,
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             Container(
-              height: 200,
-              width: 200,
-              child: Image.asset('assets/images/b1.jpg'),
+              color: Colors.red,
+              height: 400,
+              width: 500,
             ),
             Container(
-              height: 200,
-              width: 200,
-              child: Image.asset('assets/images/b2.jpg'),
-            ),
+              color: Colors.blue,
+              height: 400,
+              width: 500,
+            )
           ],
         ),
       ),
