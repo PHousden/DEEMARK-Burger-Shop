@@ -55,6 +55,7 @@ class _HomePageState extends State<HomePage> {
                   isAssets: true,
                   autoPlay: false,
                   sliderHeight: 300,
+                  isClickable: false,
                 )
               ],
             ),
