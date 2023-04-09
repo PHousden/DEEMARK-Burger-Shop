@@ -61,6 +61,7 @@ class _HomePageState extends State<HomePage> {
                       sliderHeight: 300,
                       isClickable: false,
                       indicatorActiveColor: Colors.amberAccent,
+                      indicatorDeactiveColor: Colors.black,
                     )
                   ],
                 ),
