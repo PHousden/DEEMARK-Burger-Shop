@@ -31,11 +31,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  dependencies:
-    flutter:
-      sdk:
-    fan_carousel_image_slider: any
+  fan_carousel_image_slider: ^0.1.2
 
 
   # The following adds the Cupertino Icons font to your application.
