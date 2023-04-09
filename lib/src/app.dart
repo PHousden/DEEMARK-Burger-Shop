@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DEMARK Burger',
       home: LoginPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
