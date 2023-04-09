@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> {
                   autoPlay: false,
                   sliderHeight: 300,
                   isClickable: false,
+                  indicatorActiveColor: Colors.amberAccent,
                 )
               ],
             ),
